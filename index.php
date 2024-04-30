@@ -21,19 +21,19 @@ $whatsapp_cloud_api = new WhatsAppCloudApi([
 
 try {
 
-    $whatsapp_cloud_api->sendTemplate('916205881326', 'hello_world', 'en_US');
-   // $whatsapp_cloud_api->sendTextMessage('916205881326', 'hello its workinng ?');
+    // $whatsapp_cloud_api->sendTemplate($test_to_number, 'hello_world', 'en_US');
+   $whatsapp_cloud_api->sendTextMessage($test_to_number, 'hello its workinng ?');
 
     /*$document_link = 'https://i.ytimg.com/vi/0jIQK3GvmDk/hqdefault.jpg';
     $link_id = new LinkID($document_link);
-    $whatsapp_cloud_api->sendDocument('916205881326', $link_id, "Document", "caption of document");*/
+    $whatsapp_cloud_api->sendDocument($test_to_number, $link_id, "Document", "caption of document");*/
 
     /*$link_id = new LinkID('https://i.ytimg.com/vi/0jIQK3GvmDk/hqdefault.jpg');
-    $whatsapp_cloud_api->sendImage('916205881326', $link_id);*/
+    $whatsapp_cloud_api->sendImage($test_to_number, $link_id);*/
 
     /*$name = new ContactName('Sajid', 'Ali');
     $phone = new Phone('7065221377', PhoneType::CELL());
-    $whatsapp_cloud_api->sendContact('916205881326', $name, $phone);*/
+    $whatsapp_cloud_api->sendContact($test_to_number, $name, $phone);*/
 
 
     /*$rows = [
@@ -47,7 +47,7 @@ try {
     $action = new Action('Submit', $sections);
 
     $whatsapp_cloud_api->sendList(
-        '916205881326',
+        $test_to_number,
         'Rate your experience',
         'Please consider rating your shopping experience in our website',
         'Thanks for your time',
