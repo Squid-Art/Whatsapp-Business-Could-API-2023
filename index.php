@@ -1,4 +1,5 @@
 <?php
+require_once 'config.php';
 
 // Require the Composer autoloader.
 require 'vendor/autoload.php';
@@ -14,8 +15,8 @@ use Netflie\WhatsAppCloudApi\Message\OptionsList\Action;
 
 // Instantiate the WhatsAppCloudApi super class.
 $whatsapp_cloud_api = new WhatsAppCloudApi([
-    'from_phone_number_id' => '',
-    'access_token' => '',
+    'from_phone_number_id' => $phone_number_id,
+    'access_token' => $whatsapp_access_token,
 ]);
 
 try {
